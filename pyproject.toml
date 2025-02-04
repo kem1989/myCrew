@@ -1,0 +1,23 @@
+[project]
+name = "varcrew"
+version = "0.1.0"
+description = "varcrew using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.80.0,<1.0.0",
+    "onnxruntime==1.15.0",
+    "socksio>=1.0.0",
+    "pyarrow==17.0.0",
+]
+
+[project.scripts]
+varcrew = "varcrew.main:run"
+run_crew = "varcrew.main:run"
+train = "varcrew.main:train"
+replay = "varcrew.main:replay"
+test = "varcrew.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
